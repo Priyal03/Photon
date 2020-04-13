@@ -17,6 +17,6 @@ public class CharFrequency {
 	    	frequency.computeIfAbsent(str.charAt(i), (c)->1);
 	    	
 	    }
-	    System.out.println(frequency);
+	    System.out.println(frequency+ " freq");
 	}
 }
