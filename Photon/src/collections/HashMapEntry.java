@@ -1,5 +1,4 @@
 package collections;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -17,14 +16,20 @@ public class HashMapEntry {
 		map.put(103, "Sam");
 		map.put(104,"Sandy");
 		
-		Set<Entry<Integer,String>> entrySet = map.entrySet();
-		System.out.println(entrySet);
+		Set<Entry<Integer, String>> entr = map.entrySet();
 		
-		Set<Integer> keys = map.keySet();
-		System.out.println(keys);
+		Iterator<Entry<Integer, String>> it = entr.iterator();
 		
-		Collection<String> values = map.values();
-		System.out.println(values);
+		
+		map.forEach((u,v)->System.out.println(u+" &&&& "+v));
+		
+		entr.forEach((u)->System.out.println(u+" entry wala"));
+		
+		System.out.println(map.entrySet());
+		
+		System.out.println(map.keySet());
+		
+		System.out.println(map.values());
 		
 
 		HashMap<String, String> userCountryMap = new HashMap<>();
@@ -38,7 +43,7 @@ public class HashMapEntry {
 		System.out.println("=========================================================");
 		System.out.println("Iterating over HashMap with foreach and lambda:");
 		userCountryMap.forEach((user,country) -> { 
-			System.out.println(user+" --> "+country);
+			System.out.println(user+" lives in "+country);
 			} 
 		);
 		
@@ -46,17 +51,19 @@ public class HashMapEntry {
 		System.out.println("Iterating over HashMap using keyset() with foreach loop:");
 		for(String user:userCountryMap.keySet())
 		{
-			System.out.println(user+" --> "+userCountryMap.get(user));
+			System.out.println(user+" has value = "+userCountryMap.get(user));
 		}
+		
 		System.out.println("=========================================================");
 		System.out.println("Iterating over HashMap's keyset() with foreach and lambda:");
-		userCountryMap.keySet().forEach((user) -> { 
-			System.out.println(user+" --> "+userCountryMap.get(user));
+		userCountryMap.keySet().forEach((yo) -> { 
+			System.out.println("Key="+yo+" value="+userCountryMap.get(yo));
 			} 
 		);
 		
 		System.out.println("=========================================================");
 		System.out.println("Iterating over HashMap's entrySet with iterator");
+		
 		Iterator<Entry<String, String>> iterator = userCountryMap.entrySet().iterator();
 		while(iterator.hasNext())
 		{
