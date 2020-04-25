@@ -31,6 +31,14 @@ public class HashMapEntry {
 		
 		System.out.println(map.values());
 		
+		Set<Integer> keysets = map.keySet();
+		Iterator<Integer> keyIt = keysets.iterator();
+		
+		while(keyIt.hasNext()) {
+			Integer key = keyIt.next();
+			System.out.println(key+" "+map.get(key));
+		}//java 7
+		
 
 		HashMap<String, String> userCountryMap = new HashMap<>();
 		
