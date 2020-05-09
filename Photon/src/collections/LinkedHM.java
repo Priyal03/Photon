@@ -17,16 +17,13 @@ public class LinkedHM {
 		 
 		//Access 3rd pair
 		pairs.get(3);
-		 
 		//Access 2nd pair
 		String x = pairs.getOrDefault(2, "Fooo");
-		
 		System.out.println(x);
 		 
 		pairs.forEach((key, value) -> {
 		    System.out.println("Key:"+ key + ", Value:" + value);
 		}); 
-		
 		
 	}
 

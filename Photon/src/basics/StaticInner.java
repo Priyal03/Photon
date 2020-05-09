@@ -7,10 +7,13 @@ public class StaticInner {
 	private static String message = "Hello Priyal";
 	private String nonStatic = "I am not static";
 	 
+	
     // Static nested class
     private static class MessagePrinter{
         //Only static member of Outer class is directly accessible in nested static class
 
+    	
+    	
         public void printMessage(){
             System.out.println("Message from nested static class : " + message+" "); //+nonStatic); gives context compile time error
         }
@@ -48,6 +51,7 @@ public class StaticInner {
      
         // similarly you can now call Inner class method
         nonStaticInner.display();
+        
     }
 
 }

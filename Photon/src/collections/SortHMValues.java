@@ -26,6 +26,7 @@ public class SortHMValues {
   // Iterating HashMap Using keySet() and for each loop
   System.out.println("Before Sorting");
   System.out.println("-----------------------------");
+ 
   for (String countryKey : countryCapitalMap.keySet()) {
    System.out.println("Country:" + countryKey + " and  Capital:" + countryCapitalMap.get(countryKey));
  

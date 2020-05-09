@@ -1,0 +1,39 @@
+At the basic level, the difference between Collections and Streams has to do with when things are computed. 
+A Collection is an in-memory data structure, which holds all the values that the data structure currently has—
+every element in the Collection has to be computed before it can be added to the Collection. 
+A Stream is a conceptually fixed data structure, in which elements are computed on demand. 
+This gives rise to significant programming benefits. The idea is that a user will extract only the values they require 
+from a Stream, and these elements are only produced—invisibly to the user—as and when required. 
+This is a form of a producer-consumer relationship.
+
+If we consider performance and easiness in debugging, loops can not be beaten. Loops are much light weight and definitely 
+perform better than streams.vBut the performance is not so much that we do not consider the streams at all. Streams are 
+more of a coding style where we can express our logic/intent in more declarative way. Stream operations are more cleaner and readable.
+So it’s more of coding/syntax style why we choose streams. Otherwise everything can be achieved via loops/if-else 
+statements as well, but they may be hard to understand and may look ugly in comparison.
+
+------------------ LAMBDA -------------------
+a Lambda expression is just an anonymous function i.e. a function with no name and without being bounded to an identifier.
+
+The most important features of Lambda Expressions is that they execute in the context of their appearance. So, a similar 
+lambda expression can be executed differently in some other context (i.e. logic will be same but results will be 
+different based on different parameters passed to function).
+
+In other words, lambda expressions are nameless functions given as constant values, and written exactly in the place 
+where it’s needed, typically as a parameter to some other function.
+
+----------------- FUNCTIONAL ------------------
+The answer lies in the benefits involved in functional programming over object oriented programming (OOP). Most OOP 
+languages evolve around objects and instances and treat only them their first class citizens. Another important entity
+i.e. functions take back seat. This is specially true in java, where functions can’t exist outside an object. A function 
+itself does not mean anything in java, until it is related to some object or instance.
+But in functional programming, you can define functions, give them reference variables and pass them as method arguments 
+and much more. JavaScript is a good example of this where you can pass callback methods e.g. to Ajax calls. It’s very 
+useful feature and has been lacking in java from beginning. Now with java 8, we can also use these lambda expressions.
+
+We know that Lambda expressions are anonymous functions with no name and they are passed (mostly) to other functions as 
+parameters. Well, in java method parameters always have a type and this type information is looked for to determine 
+which method needs to be called in case of method overloading or even simple method calling. So, basically every lambda 
+expression also must be convertible to some type to be accepted as method parameters. Well, that type in which lambda 
+expressions are converted, are always of functional interface type.
+

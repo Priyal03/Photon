@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -40,12 +41,13 @@ public class ForEach {
 		nameID.forEach((k,v)->System.out.println("Key :"+k+", Value :"+v));
 		System.out.println("---------------------------------------------");
 		
-		//iterating hashmap using foreach and BIConsumer interface.
+		//Iterating hashmap using foreach and BIConsumer interface.
 		BiConsumer<String, Integer> printWithConsumer = (k,v) -> {
 			
 			System.out.println("key "+ k);
 			System.out.println("value "+ v);
 		};
+		
 		nameID.forEach(printWithConsumer);
 		System.out.println("---------------------------------------------");
 		
@@ -53,6 +55,11 @@ public class ForEach {
 		Consumer<String> consumer = System.out::println;
 		name.stream().filter(n -> n!=null).forEach(consumer);
 		
+		System.out.println("---------------------------------------------");
+		Consumer<Map.Entry<String, Integer>> entryAction = System.out::println;
+		nameID.entrySet().stream().forEach(entryAction);
+		
+		System.out.println("---------------------------------------------");
 		
 	}
 
