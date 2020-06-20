@@ -1,10 +1,10 @@
-package tree;
+package array;
 
-public class Cleanup {
+public class DIffArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.gc();
+
 	}
 
 }

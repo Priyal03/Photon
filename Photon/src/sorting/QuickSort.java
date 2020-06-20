@@ -21,6 +21,14 @@ public class QuickSort {
 		}
 	}
 
+//	private static void quickSortSpace(int[] array, int i) {
+//		
+//		Stack<Integer> stack=new Stack<>();
+//		
+//		
+//		
+//	}
+
 	private static void quickSort(int[] array, int low, int high) {
 		// TODO Auto-generated method stub
 
@@ -40,7 +48,10 @@ public class QuickSort {
 		quickSort(array, low, pivotIndex - 1);
 		quickSort(array, pivotIndex + 1, high);
 	}
-
+/*
+ * space complexity : O(log n)
+ * TC : 
+ */
 	private static void iterativeQS(int[] array, int high) {
 
 		Stack<Integer> stack = new Stack<>();

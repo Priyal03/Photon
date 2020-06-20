@@ -25,7 +25,7 @@ public class Recursion {
 		}
 		return fact;
 	}
-
+//easy to write for programmer
 	private static int findfactorial(int i) {
 		// TODO Auto-generated method stub
 
@@ -40,5 +40,5 @@ public class Recursion {
 
 		return fact;
 	}
-
+//something is like tail recusrion. again java compiler doesn't use tail recusrion so implementing it is useless while coding in java
 }

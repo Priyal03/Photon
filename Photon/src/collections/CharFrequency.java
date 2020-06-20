@@ -1,7 +1,13 @@
+
+
 package collections;
 
 import java.util.HashMap;
 
+/**
+ * @author coder
+ *
+ */
 public class CharFrequency {
 	
 	public static void main(String[] args) {
